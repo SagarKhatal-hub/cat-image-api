@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Cat Image HTTP Status Code Code API Documentation</title>
+  <!-- Load Swagger UI CSS styles -->
+  <link rel="stylesheet" href="https://unpkg.com" />
+  <style>
+    html { box-sizing: border-box; overflow: -moz-scrollbars-vertical; overflow-y: scroll; }
+    *, *:before, *:after { box-sizing: inherit; }
+    body { margin: 0; background: #fafafa; }
+  </style>
+</head>
+<body>
+  <!-- This div is where the interactive Swagger interface will render -->
+  <div id="swagger-ui"></div>
+
+  <!-- Load Swagger UI scripts -->
+  <script src="https://unpkg.com"></script>
+  <script src="https://unpkg.com"></script>
+  <script>
+    window.onload = () => {
+      window.ui = SwaggerUIBundle({
+        url: 'openapi.yml', // Points directly to your YAML file in the same folder
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ],
+        layout: "BaseLayout"
+      });
+    };
+  </script>
+</body>
+</html>

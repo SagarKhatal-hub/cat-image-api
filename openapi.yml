@@ -1,0 +1,34 @@
+openapi: 3.0.3
+info:
+  title: Cat Image HTTP Status Code API 
+  description: >
+    This is a sample API documentation.
+    This uses get method and HTTP status code as query parameter to return funny cat images.
+    You can use following status codes to return cat iamges mapped to status codes:
+      2xx - 200, 201, 204
+      3xx - 301, 304, 308
+      4xx - 400, 401, 403, 404, 429 
+      5xx - 500, 502, 503, 504
+  version: 1.0.0
+servers:
+  - url: https://cataas.com
+paths:
+  /cat/says/Error{status_code}:
+    get:
+      summary: Fetch a cat image overlaid with an HTTP error code
+      parameters:
+        - name: status_code
+          in: path
+          required: true
+          description: The HTTP status code to print on the cat image (e.g., 404, 500)
+          schema:
+            type: integer
+            example: 404
+      responses:
+        '200':
+          description: Successfully retrieved the cat image with text overlay
+          content:
+            image/jpeg:
+              schema:
+                type: string
+                format: binary
