@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cat Error Code API Documentation</title>
-  <!-- Load verified Swagger UI CSS from global CDN -->
-  <link rel="stylesheet" href="https://unpkg.com" />
+  <!-- Load Swagger UI CSS styles from Cloudflare CDN instead of unpkg -->
+  <link rel="stylesheet" href="https://cloudflare.com" />
   <style>
     html { box-sizing: border-box; }
     *, *:before, *:after { box-sizing: inherit; }
@@ -17,9 +17,8 @@
   <!-- The core container Swagger injects itself into -->
   <div id="swagger-ui"></div>
 
-  <!-- Load explicit bundle and standalone preset scripts sequentially -->
-  <script src="https://unpkg.com" crossorigin></script>
-  <script src="https://unpkg.com" crossorigin></script>
+  <!-- Load verified Swagger UI bundle script from Cloudflare CDN with explicit anonymous CORS -->
+  <script src="https://cloudflare.com" crossorigin="anonymous"></script>
   
   <script>
     window.onload = () => {
@@ -29,10 +28,9 @@
         dom_id: '#swagger-ui',
         deepLinking: true,
         presets: [
-          SwaggerUIBundle.presets.apis,
-          SwaggerUIStandalonePreset
+          SwaggerUIBundle.presets.apis
         ],
-        layout: "StandaloneLayout"
+        layout: "BaseLayout"
       });
     };
   </script>
