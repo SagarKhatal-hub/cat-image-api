@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cat Error Code API Documentation</title>
-  <!-- Load Swagger UI CSS styles from Cloudflare CDN instead of unpkg -->
-  <link rel="stylesheet" href="https://cloudflare.com" />
+  <!-- Load Swagger UI CSS locally from your own repo -->
+  <link rel="stylesheet" href="swagger-ui.css" />
   <style>
     html { box-sizing: border-box; }
     *, *:before, *:after { box-sizing: inherit; }
@@ -17,12 +17,11 @@
   <!-- The core container Swagger injects itself into -->
   <div id="swagger-ui"></div>
 
-  <!-- Load verified Swagger UI bundle script from Cloudflare CDN with explicit anonymous CORS -->
-  <script src="https://cloudflare.com" crossorigin="anonymous"></script>
+  <!-- Load Swagger UI script locally from your own repo -->
+  <script src="swagger-ui-bundle.js"></script>
   
   <script>
     window.onload = () => {
-      // Initialize the bundle mapping directly onto your openapi.yml asset
       window.ui = SwaggerUIBundle({
         url: 'openapi.yml', 
         dom_id: '#swagger-ui',
