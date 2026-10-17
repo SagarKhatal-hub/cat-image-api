@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cat Error Code API Documentation</title>
-  <!-- Load Swagger UI CSS locally from your own repo -->
-  <link rel="stylesheet" href="swagger-ui.css" />
+  <!-- Load Swagger UI CSS styles from jsDelivr Mirror CDN to bypass network filters -->
+  <link rel="stylesheet" href="https://jsdelivr.net" />
   <style>
     html { box-sizing: border-box; }
     *, *:before, *:after { box-sizing: inherit; }
@@ -17,11 +17,12 @@
   <!-- The core container Swagger injects itself into -->
   <div id="swagger-ui"></div>
 
-  <!-- Load Swagger UI script locally from your own repo -->
-  <script src="swagger-ui-bundle.js"></script>
+  <!-- Load verified Swagger UI bundle script from jsDelivr Mirror CDN -->
+  <script src="https://jsdelivr.net" crossorigin="anonymous"></script>
   
   <script>
     window.onload = () => {
+      // Initialize the bundle mapping directly onto your openapi.yml asset
       window.ui = SwaggerUIBundle({
         url: 'openapi.yml', 
         dom_id: '#swagger-ui',
