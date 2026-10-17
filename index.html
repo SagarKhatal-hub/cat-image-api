@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cat Error Code API Documentation</title>
-  <!-- Load Swagger UI CSS from a completely alternative CDN -->
-  <link rel="stylesheet" href="https://jsdelivr.net" />
+  <!-- Use a specialized fallback CDN node less likely to be blocked by local firewalls -->
+  <link rel="stylesheet" href="https://baomitu.com" />
   <style>
     html { box-sizing: border-box; }
     *, *:before, *:after { box-sizing: inherit; }
@@ -14,14 +14,15 @@
 </head>
 <body>
 
-  <!-- The core container Swagger injects itself into -->
+  <!-- Core wrapper where Swagger renders its layout elements -->
   <div id="swagger-ui"></div>
 
-  <!-- Using static jsDelivr network layer to bypass local file memory cache completely -->
-  <script src="https://jsdelivr.net" crossorigin="anonymous"></script>
+  <!-- Load core engine script from alternative sandbox node mirroring standard assets -->
+  <script src="https://baomitu.com" crossorigin="anonymous"></script>
   
   <script>
     window.onload = () => {
+      // Direct render blueprint mapping
       window.ui = SwaggerUIBundle({
         url: 'openapi.yml', 
         dom_id: '#swagger-ui',
