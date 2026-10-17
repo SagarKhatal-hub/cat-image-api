@@ -1,38 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cat Error Code API Documentation</title>
-  <!-- Use a specialized fallback CDN node less likely to be blocked by local firewalls -->
-  <link rel="stylesheet" href="https://baomitu.com" />
-  <style>
-    html { box-sizing: border-box; }
-    *, *:before, *:after { box-sizing: inherit; }
-    body { margin: 0; background: #fafafa; }
-  </style>
-</head>
-<body>
+  <head>
+    <title>Cat Images Status code API Documentation</title>
+    <!-- Needed for adaptive design -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://googleapis.com|Roboto:300,400,700" rel="stylesheet">
 
-  <!-- Core wrapper where Swagger renders its layout elements -->
-  <div id="swagger-ui"></div>
-
-  <!-- Load core engine script from alternative sandbox node mirroring standard assets -->
-  <script src="https://baomitu.com" crossorigin="anonymous"></script>
-  
-  <script>
-    window.onload = () => {
-      // Direct render blueprint mapping
-      window.ui = SwaggerUIBundle({
-        url: 'openapi.yml', 
-        dom_id: '#swagger-ui',
-        deepLinking: true,
-        presets: [
-          SwaggerUIBundle.presets.apis
-        ],
-        layout: "BaseLayout"
-      });
-    };
-  </script>
-</body>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      1. Change 'openapi.yml' to the exact name of your YAML file if it's named differently.
+      2. If your YAML file is in the same folder as this index.html, leave it exactly as 'openapi.yml'.
+    -->
+    <redoc spec-url="openapi.yml"></redoc>
+    
+    <!-- Load Redocly JavaScript from the official free CDN -->
+    <script src="https://redoc.ly"> </script>
+  </body>
 </html>
